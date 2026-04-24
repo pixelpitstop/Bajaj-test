@@ -60,11 +60,6 @@ export default function App() {
           busy={busy}
         />
 
-        <div className="helper-row">
-          <span>{nodeCount} entries ready</span>
-          <span>Endpoint: {apiRoot.replace(/\/$/, '')}/bfhl</span>
-        </div>
-
         {errorText ? <p className="error-banner">{errorText}</p> : null}
 
         <ResponseTree result={result} />
