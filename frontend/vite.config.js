@@ -3,11 +3,17 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
+  const apiBaseUrl =
+    process.env.BFHL_API_BASE_URL ||
+    env.BFHL_API_BASE_URL ||
+    process.env.VITE_BFHL_API_BASE_URL ||
+    env.VITE_BFHL_API_BASE_URL ||
+    '';
 
   return {
     plugins: [react()],
     define: {
-      __BFHL_API_BASE_URL__: JSON.stringify(env.BFHL_API_BASE_URL || env.VITE_BFHL_API_BASE_URL || ''),
+      __BFHL_API_BASE_URL__: JSON.stringify(apiBaseUrl),
     },
   };
 });
