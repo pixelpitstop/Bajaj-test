@@ -46,7 +46,7 @@ npm run dev
 
 ## Frontend
 
-The frontend reads the API base URL from `VITE_BFHL_API_BASE_URL`.
+The frontend reads the API base URL from `BFHL_API_BASE_URL`.
 
 ### Run locally
 
@@ -63,7 +63,7 @@ cd frontend
 npm run build
 ```
 
-Set `VITE_BFHL_API_BASE_URL` to your hosted backend before building the frontend.
+Set `BFHL_API_BASE_URL` to your hosted backend before building the frontend.
 
 ## Deployment notes
 

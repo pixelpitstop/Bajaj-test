@@ -1,4 +1,4 @@
-const defaultApiRoot = import.meta.env.VITE_BFHL_API_BASE_URL || 'http://localhost:4000';
+const defaultApiRoot = __BFHL_API_BASE_URL__ || import.meta.env.VITE_BFHL_API_BASE_URL || 'http://localhost:4000';
 
 export async function sendNodeList(apiRoot, nodeList) {
   const response = await fetch(new URL('/bfhl', apiRoot), {
